@@ -1,9 +1,19 @@
-{% load static %}
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'qotd/styles.css' %}"/>
+</head>
 
-<link rel="stylesheet" type="text/css" href="{% static 'qotd/styles.css' %}" />
-
-<p>
-    {{ quote.content }}
-    <br>
-    - {{ quote.author }}, <i>{{ quote.dateCreated | date }}</i>
-</p>
+<body>
+<div id="header">
+    <img src="{% static 'qotd/images/logo.png' %}" alt="logo"/>
+</div>
+<div id="quote">
+    <q>{{ quote.content }}</q>
+    <p>
+        - {{ quote.author }}, <i>{{ quote.dateCreated | date }}</i>
+    </p>
+</div>
+</body>
+</html>
