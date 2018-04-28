@@ -4,6 +4,7 @@ venv
 # PyBuilder
 target/
 
+staticfiles
 
 ### Django ###
 *.log

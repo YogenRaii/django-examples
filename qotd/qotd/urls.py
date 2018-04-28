@@ -19,5 +19,5 @@ from quote.views import quote
 
 urlpatterns = [
     path('', quote),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls)
 ]
